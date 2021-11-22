@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+// font-family: 'Lato', sans-serif;
+
+// *******
+// GLOBALS
+// *******
+
+$color_btn : #eb4d4c;
+$color_btn : #EB4D4C;
+$color_bg_current : #f7f7f7;
+$color_bg_main : #ffffff;
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.new-game{
+    display: flex;
+    &-round{
+        display: block;
+    }
+}
