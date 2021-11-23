@@ -3,13 +3,63 @@
   font-family: 'Lato', sans-serif;
 }
 
-.new-game {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(#b9b58b), color-stop(4%, #987d61), color-stop(30%, #b9bb5a), color-stop(52%, #945335), color-stop(77%, #9e4821), to(#b48d7c));
+  background: linear-gradient(90deg, #b9b58b 0%, #987d61 4%, #b9bb5a 30%, #945335 52%, #9e4821 77%, #b48d7c 100%);
+  background-size: 10px 10px calc(100% - 2px) 7px, 1px 1px, 7px calc(100% - 2px);
+  background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+  background-repeat: no-repeat;
 }
 
-.new-game-round {
-  display: block;
+.main-color {
+  color: #EB4D4C;
+}
+
+.container-game-board {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-game-board .game-board {
+  width: 97%;
+  height: 95%;
+}
+
+.container-game-board .game-board .bg-player-one {
+  background-color: #f7f7f7;
+  width: 50%;
+}
+
+.container-game-board .game-board .bg-player-two {
+  background-color: #fff;
+  width: 50%;
+}
+
+.new-games {
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+.wrapper-player .player-turn {
+  font-weight: 400;
+}
+
+.wrapper-player .player-turn-dot {
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #EB4D4C;
+  border-radius: 50%;
+}
+
+.dice {
+  background-color: #ccc;
+}
+
+.plateau {
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */

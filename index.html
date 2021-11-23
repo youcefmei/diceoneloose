@@ -12,22 +12,53 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 m-auto">
-                <div class="new-game">
-                    <img src="images/plus-circle.svg" alt="">
-                    <div>NEW GAME</div>
+    <div class="container-game-board d-flex align-items-center justify-content-center">
+        <!-- board -->
+        <div class="game-board bg-primary d-flex position-relative">
+            <!-- backgroung players  -->
+            <div class="bg-player-one"></div>
+            <div class="bg-player-two"></div>
+            <!-- game contents -->
+            <div class="container-fluid position-absolute bg-transparent h-100 w-100">
+                <!-- new game row -->
+                <div class="row new-game m-5">
+                    <div class="col m-auto d-flex justify-content-center align-items-center">
+                        <div class="d-flex">
+                            <img src="images/plus-circle.svg" alt="">
+                            <div class="ms-1 ms-md-2 py-0 ">NEW GAME</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- players & scores row -->
+                <div class="row h-100 w-100">
+                    <div class="col-3 ms-auto">
+                        <div class="wrapper-player d-flex flex-column align-items-center justify-content-center">
+                            <div class="player-one d-flex align-items-center justify-content-center">
+                                <div class="player-turn" >PLAYER 1</div>
+                                <div class="player-turn-dot ms-3" ></div>
+                            </div>
+                            <div id="player-one-score" class="main-color display-1">0</div>
+                        </div>
+                    </div>
+                    <div class="col-3">DICE COL</div>
+                    <div class="col-3 me-auto">
+                        <div class="wrapper-player d-flex ">PLAYER 2 COL</div>
                 </div>
             </div>
-
         </div>
+        
     </div>
+    <!-- <img src="images/arrow-repeat.svg" alt="">
+    <img src="images/box-arrow-in-down.svg" alt=""> -->
 
 
 
-    <img src="images/arrow-repeat.svg" alt="">
-    <img src="images/box-arrow-in-down.svg" alt="">
+
+
+
+
+
 
 
     <script src="js/bootstrap.bundle.min.js"></script>

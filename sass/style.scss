@@ -5,20 +5,116 @@
 // GLOBALS
 // *******
 
-$color_btn : #eb4d4c;
-$color_btn : #EB4D4C;
+$color_main : #eb4d4c;
+$color_main : #EB4D4C;
 $color_bg_current : #f7f7f7;
-$color_bg_main : #ffffff;
+// $color_main : #ffffff;
 
 * {
     font-family: 'Lato', sans-serif;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(185,181,139,1) 0%, rgba(152,125,97,1) 4%, rgba(185,187,90,1) 30%, rgb(148, 83, 53) 52%, rgb(158, 72, 33) 77%, rgba(180,141,124,1) 100%);
+    background-size: 10px 10px calc(100% - 2px) 7px, 1px 1px, 7px calc(100% - 2px);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+}
 
+.main-color{
+    color: $color_main;
+}
 
-.new-game{
-    display: flex;
-    &-round{
-        display: block;
+//********
+// BOARD
+//********
+
+.container-game-board{
+    width: 100vw;
+    height: 100vh;
+    & .game-board{
+        width: 97%;
+        height: 95%;
+        & .bg-player{
+            &-one{
+                background-color: #f7f7f7;
+                width: 50%;
+            }
+            &-two{
+                background-color: #fff;
+                width: 50%;
+            }
+        }
     }
 }
+
+
+//******
+//NEW GAME
+//******
+
+.new-games{
+    font-size: 2em;
+    white-space: nowrap;
+}
+
+
+
+//*******
+// PLAYER
+//*******
+
+
+.wrapper-player{
+    // font-size: 50px;
+    & .player-turn{
+        font-weight: 400;
+        &-dot{
+            width:0.5em;
+            height:0.5em;
+            background-color: $color_main;
+            border-radius: 50%;
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+.dice{
+    background-color: #ccc;
+    // width:10em;
+    // height: 10em;
+    // &-dot{
+    //     height: 1.2em;
+    //     width: 1.2em;
+    //     background-color: $color_main;
+    //     border-radius: 50%;
+
+    // }
+}
+
+
+.plateau{
+    // top:10px;
+    // left:10px;
+    top:0;
+    left:0;
+}
+
+
+// .new-game{
+//     display: flex;
+//     &-round{
+//         display: block;
+//     }
+// }
