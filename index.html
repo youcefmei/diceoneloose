@@ -21,36 +21,100 @@
             <!-- game contents -->
             <div class="container-fluid position-absolute bg-transparent h-100 w-100">
                 <!-- new game row -->
-                <div class="row new-game m-5">
+                <div class="row game-btn-wrapper my-1 my-lg-5">
                     <div class="col m-auto d-flex justify-content-center align-items-center">
-                        <div class="d-flex">
-                            <img src="images/plus-circle.svg" alt="">
-                            <div class="ms-1 ms-md-2 py-0 ">NEW GAME</div>
+                        <div class="d-flex d-flex justify-content-center align-items-center">
+                            <img class="game-icon" src="images/plus-circle.svg" alt="">
+                            <div class="ms-1 ms-md-2 game-text">NEW GAME</div>
                         </div>
                     </div>
                 </div>
+                <!-- current game row -->
 
-                <!-- players & scores row -->
                 <div class="row h-100 w-100">
+                    <!-- player 1  & score col -->
+
                     <div class="col-3 ms-auto">
-                        <div class="wrapper-player d-flex flex-column align-items-center justify-content-center">
-                            <div class="player-one d-flex align-items-center justify-content-center">
-                                <div class="player-turn" >PLAYER 1</div>
-                                <div class="player-turn-dot ms-3" ></div>
+                        <div
+                            class="wrapper-player d-flex flex-column align-items-center justify-content-center my-0 my-lg-5">
+                            <div
+                                class="player-one player-turn d-flex align-items-center justify-content-center my-0 my-lg-5">
+                                <div>PLAYER 1</div>
+                                <div class="player-turn-dot ms-3 rounded-circle"></div>
                             </div>
-                            <div id="player-one-score" class="main-color display-1">0</div>
+                            <div id="player-one-score" class="main-color ">0</div>
+
+                            <div
+                                class="wrapper-score-temp d-flex flex-column align-items-center justify-content-center py-2 px-3 px-lg-5 my-0 my-lg-5 ">
+                                <div>CURRENT</div>
+                                <div id="player-one-score-temp">0</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-3">DICE COL</div>
+                    <!-- dice and btns col -->
+                    <div class="col-3 ">
+                        <!-- <div class="wrapper-dice-btns d-flex justify-content-center align-items-center flex-column h-100 "> -->
+                        <div class="wrapper-dice-btns d-flex justify-content-center justify-content-lg-around align-items-center flex-column h-100 ">
+                            <div class="dice d-flex flex-column  ">
+                                <div id="dice-row-one" class="dice-row d-flex">
+                                    <div class="dice-dot dice-col-one"></div>
+                                    <div class="dice-dot dice-col-two"></div>
+                                    <div class="dice-dot dice-col-three"></div>
+                                </div>
+                                <div id="dice-row-two" class="dice-row d-flex">
+                                    <div class="dice-dot dice-col-one"></div>
+                                    <div class="dice-dot dice-col-two"></div>
+                                    <div class="dice-dot dice-col-three"></div>
+                                </div>
+                                <div id="dice-row-three" class="dice-row d-flex">
+                                    <div class="dice-dot dice-col-one"></div>
+                                    <div class="dice-dot dice-col-two"></div>
+                                    <div class="dice-dot dice-col-three"></div>
+                                </div>
+                            </div>
+
+                            <!-- buttons bottom -->
+                            <div class="d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-0">
+                                <!-- roll dice button -->
+                                <div class="d-flex game-btn-wrapper d-flex justify-content-center align-items-center ">
+                                <!-- <div class="d-flex game-btn-wrapper my-4 my-lg-5 d-flex justify-content-center align-items-center"> -->
+                                        <img class="game-icon" src="images/arrow-repeat.svg" alt="">
+                                    <div class="ms-1 ms-md-2 game-text">ROLL DICE</div>
+                                </div>
+                                <!-- hold button -->
+                                <div class="d-flex game-btn-wrapper d-flex justify-content-center align-items-center m-3">
+                                    <img class="game-icon" src="images/box-arrow-in-down.svg" alt="">
+                                    <div class="ms-1 ms-md-2 game-text">HOLD</div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- player 2  & score col -->
+
                     <div class="col-3 me-auto">
-                        <div class="wrapper-player d-flex ">PLAYER 2 COL</div>
+                        <div
+                            class="wrapper-player d-flex flex-column align-items-center justify-content-center my-0 my-lg-5">
+                            <div
+                                class="player-two player-turn d-flex align-items-center justify-content-center my-0 my-lg-5 ms-5">
+                                <div class="player-turn-dot me-3 rounded-circle"></div>
+                                <div>PLAYER 2</div>
+                            </div>
+                            <div id="player-two-score" class="main-color">0</div>
+
+                            <div
+                                class="wrapper-score-temp d-flex flex-column align-items-center justify-content-center py-2 px-3 px-lg-5 my-0 my-lg-5">
+                                <div>CURRENT</div>
+                                <div id="player-two-score-temp">0</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
-        
-    </div>
-    <!-- <img src="images/arrow-repeat.svg" alt="">
-    <img src="images/box-arrow-in-down.svg" alt=""> -->
 
 
 
@@ -61,8 +125,9 @@
 
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
 </body>
 
 </html>

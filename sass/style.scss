@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 // font-family: 'Lato', sans-serif;
 
 // *******
@@ -6,12 +6,22 @@
 // *******
 
 $color_main : #eb4d4c;
-$color_main : #EB4D4C;
-$color_bg_current : #f7f7f7;
+// $color_main : #EB4D4C;
+$color_bg_player_one : #f7f7f7;
+$label_btn_font_size:1.3em;
+$player_text_font-size:2em;
+$player_score_font-size:3em;
+$player_score_temp_font-size:2em;
+$player_score_temp_color:#fff;
+$dice_side:7em;
+// $dice_dot_radius:7em;
+
 // $color_main : #ffffff;
 
 * {
     font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 body{
@@ -28,6 +38,10 @@ body{
     color: $color_main;
 }
 
+.hide{
+    opacity: 0;
+}
+
 //********
 // BOARD
 //********
@@ -40,7 +54,7 @@ body{
         height: 95%;
         & .bg-player{
             &-one{
-                background-color: #f7f7f7;
+                background-color: $color_bg_player_one;
                 width: 50%;
             }
             &-two{
@@ -53,68 +67,71 @@ body{
 
 
 //******
-//NEW GAME
+//BUTTONS & ICONS
 //******
-
-.new-games{
-    font-size: 2em;
-    white-space: nowrap;
+.game-btn-wrapper{    
+    & .game-text{
+        font-size: $label_btn_font_size;
+        }
+    & .game-icon{
+        width: $label_btn_font_size+0.6em;
+    }
 }
 
 
-
 //*******
-// PLAYER
+// PLAYER AND SCORE
 //*******
-
 
 .wrapper-player{
     // font-size: 50px;
     & .player-turn{
-        font-weight: 400;
+        font-size: $player_text_font-size;
+        font-weight: 300;
         &-dot{
-            width:0.5em;
-            height:0.5em;
+            width:$player_text_font-size/4;
+            height:$player_text_font-size/4;
             background-color: $color_main;
-            border-radius: 50%;
-
         }
-
     }
+}
 
+#player-one-score,#player-two-score{
+    font-weight: 300;
+    font-size:$player_score_font-size;
+}
+
+
+//*************
+// SCORE TEMP
+//************
+
+.wrapper-score-temp{
+    background-color: $color_main;
+}
+
+#player-one-score-temp,#player-two-score-temp{
+    font-size: $player_score_temp_font-size;
+    color: $player_score_temp_color;
 }
 
 
 
-
-
-
+//***************
+// DICE 
+//***************
 
 .dice{
-    background-color: #ccc;
-    // width:10em;
-    // height: 10em;
-    // &-dot{
-    //     height: 1.2em;
-    //     width: 1.2em;
-    //     background-color: $color_main;
-    //     border-radius: 50%;
-
-    // }
+    background-color: #fff;
+    width:$dice_side;
+    height: $dice_side;
+    box-shadow: 0px 0px 13px 1px #BAB8B9;
+    border-radius: $dice_side/12;
+    &-dot{
+        height: $dice_side/6;
+        width: $dice_side/6;
+        margin: $dice_side/12;
+        background-color: $color_main;
+        border-radius: 50%;
+    }
 }
-
-
-.plateau{
-    // top:10px;
-    // left:10px;
-    top:0;
-    left:0;
-}
-
-
-// .new-game{
-//     display: flex;
-//     &-round{
-//         display: block;
-//     }
-// }

@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 * {
   font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 body {
@@ -15,7 +17,11 @@ body {
 }
 
 .main-color {
-  color: #EB4D4C;
+  color: #eb4d4c;
+}
+
+.hide {
+  opacity: 0;
 }
 
 .container-game-board {
@@ -38,28 +44,53 @@ body {
   width: 50%;
 }
 
-.new-games {
-  font-size: 2em;
-  white-space: nowrap;
+.game-btn-wrapper .game-text {
+  font-size: 1.3em;
+}
+
+.game-btn-wrapper .game-icon {
+  width: 1.9em;
 }
 
 .wrapper-player .player-turn {
-  font-weight: 400;
+  font-size: 2em;
+  font-weight: 300;
 }
 
 .wrapper-player .player-turn-dot {
   width: 0.5em;
   height: 0.5em;
-  background-color: #EB4D4C;
-  border-radius: 50%;
+  background-color: #eb4d4c;
+}
+
+#player-one-score, #player-two-score {
+  font-weight: 300;
+  font-size: 3em;
+}
+
+.wrapper-score-temp {
+  background-color: #eb4d4c;
+}
+
+#player-one-score-temp, #player-two-score-temp {
+  font-size: 2em;
+  color: #fff;
 }
 
 .dice {
-  background-color: #ccc;
+  background-color: #fff;
+  width: 7em;
+  height: 7em;
+  -webkit-box-shadow: 0px 0px 13px 1px #BAB8B9;
+          box-shadow: 0px 0px 13px 1px #BAB8B9;
+  border-radius: 0.58333em;
 }
 
-.plateau {
-  top: 0;
-  left: 0;
+.dice-dot {
+  height: 1.16667em;
+  width: 1.16667em;
+  margin: 0.58333em;
+  background-color: #eb4d4c;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
