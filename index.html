@@ -12,6 +12,23 @@
 </head>
 
 <body>
+    <!-- modal winner -->
+    <div id="modal-winner" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="player-win" class="modal-title m-auto">Player wins</h5>
+                    <button type="button" class="btn-close m-0 p-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-game-board d-flex align-items-center justify-content-center">
         <!-- board -->
         <div class="game-board bg-primary d-flex position-relative">
@@ -21,26 +38,24 @@
             <!-- game contents -->
             <div class="container-fluid position-absolute bg-transparent h-100 w-100">
                 <!-- new game row -->
-                <div class="row game-btn-wrapper my-1 my-lg-5">
+                <div class="row game-btn-wrapper my-5 my-sm-0 my-lg-5">
                     <div class="col m-auto d-flex justify-content-center align-items-center">
                         <div class="d-flex d-flex justify-content-center align-items-center">
-                            <img class="game-icon" src="images/plus-circle.svg" alt="">
+                            <img id="new-game-icon" class="game-icon" src="images/plus-circle.svg" alt="new game">
                             <div class="ms-1 ms-md-2 game-text">NEW GAME</div>
                         </div>
                     </div>
                 </div>
                 <!-- current game row -->
-
                 <div class="row h-100 w-100">
                     <!-- player 1  & score col -->
-
                     <div class="col-3 ms-auto">
                         <div
                             class="wrapper-player d-flex flex-column align-items-center justify-content-center my-0 my-lg-5">
                             <div
                                 class="player-one player-turn d-flex align-items-center justify-content-center my-0 my-lg-5">
                                 <div>PLAYER 1</div>
-                                <div class="player-turn-dot ms-3 rounded-circle"></div>
+                                <div id="player-one-dot" class="player-turn-dot ms-3 rounded-circle"></div>
                             </div>
                             <div id="player-one-score" class="main-color ">0</div>
 
@@ -53,53 +68,57 @@
                     </div>
                     <!-- dice and btns col -->
                     <div class="col-3 ">
-                        <!-- <div class="wrapper-dice-btns d-flex justify-content-center align-items-center flex-column h-100 "> -->
-                        <div class="wrapper-dice-btns d-flex justify-content-center justify-content-lg-around align-items-center flex-column h-100 ">
-                            <div class="dice d-flex flex-column  ">
+                        <div
+                            class="wrapper-dice-btns d-flex justify-content-center justify-content-lg-around align-items-center flex-column h-100 ">
+                            <div id="dice" class="d-flex flex-column">
                                 <div id="dice-row-one" class="dice-row d-flex">
-                                    <div class="dice-dot dice-col-one"></div>
-                                    <div class="dice-dot dice-col-two"></div>
-                                    <div class="dice-dot dice-col-three"></div>
+                                    <div class="hide dice-dot dice-four dice-five dice-six dice-col-one"></div>
+                                    <div class="hide dice-dot dice-col-two"></div>
+                                    <div
+                                        class="hide dice-dot dice-two dice-three dice-four dice-five dice-six dice-col-three">
+                                    </div>
                                 </div>
                                 <div id="dice-row-two" class="dice-row d-flex">
-                                    <div class="dice-dot dice-col-one"></div>
-                                    <div class="dice-dot dice-col-two"></div>
-                                    <div class="dice-dot dice-col-three"></div>
+                                    <div class="hide dice-dot dice-six dice-col-one"></div>
+                                    <div class="dice-dot dice-one dice-three dice-five dice-col-two"></div>
+                                    <div class="hide dice-dot dice-six dice-col-three"></div>
                                 </div>
                                 <div id="dice-row-three" class="dice-row d-flex">
-                                    <div class="dice-dot dice-col-one"></div>
-                                    <div class="dice-dot dice-col-two"></div>
-                                    <div class="dice-dot dice-col-three"></div>
+                                    <div
+                                        class="hide dice-dot dice-two dice-three dice-four dice-five dice-six dice-col-one">
+                                    </div>
+                                    <div class="hide dice-dot dice-col-two"></div>
+                                    <div class="hide dice-dot dice-four dice-five dice-six dice-col-three"></div>
                                 </div>
                             </div>
-
                             <!-- buttons bottom -->
-                            <div class="d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-0">
+                            <div
+                                class="d-flex flex-column justify-content-center align-items-center mt-4 mt-sm-3 mt-lg-0 ">
                                 <!-- roll dice button -->
-                                <div class="d-flex game-btn-wrapper d-flex justify-content-center align-items-center ">
-                                <!-- <div class="d-flex game-btn-wrapper my-4 my-lg-5 d-flex justify-content-center align-items-center"> -->
-                                        <img class="game-icon" src="images/arrow-repeat.svg" alt="">
+                                <div
+                                    class="d-flex game-btn-wrapper d-flex justify-content-center align-items-center hide">
+                                    <!-- <div class="d-flex game-btn-wrapper my-4 my-lg-5 d-flex justify-content-center align-items-center"> -->
+                                    <img id="roll-dice-icon" class="game-icon" src="images/arrow-repeat.svg"
+                                        alt="roll dice">
                                     <div class="ms-1 ms-md-2 game-text">ROLL DICE</div>
                                 </div>
                                 <!-- hold button -->
-                                <div class="d-flex game-btn-wrapper d-flex justify-content-center align-items-center m-3">
-                                    <img class="game-icon" src="images/box-arrow-in-down.svg" alt="">
+                                <div
+                                    class="d-flex game-btn-wrapper d-flex justify-content-center align-items-center mt-2 mt-sm-3 hide">
+                                    <img id="hold-icon" class="game-icon" src="images/box-arrow-in-down.svg"
+                                        alt="hold the dice">
                                     <div class="ms-1 ms-md-2 game-text">HOLD</div>
                                 </div>
-
                             </div>
-
-
                         </div>
                     </div>
                     <!-- player 2  & score col -->
-
                     <div class="col-3 me-auto">
                         <div
                             class="wrapper-player d-flex flex-column align-items-center justify-content-center my-0 my-lg-5">
                             <div
                                 class="player-two player-turn d-flex align-items-center justify-content-center my-0 my-lg-5 ms-5">
-                                <div class="player-turn-dot me-3 rounded-circle"></div>
+                                <div id="player-two-dot" class="player-turn-dot me-3 rounded-circle hide"></div>
                                 <div>PLAYER 2</div>
                             </div>
                             <div id="player-two-score" class="main-color">0</div>
@@ -113,17 +132,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
-
-
-
-
-
-
-
-
 
 
         <script src="js/bootstrap.bundle.min.js"></script>
